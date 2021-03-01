@@ -5,3 +5,4 @@ RMDS 2021 Data Science Competition - Impact of News Sentiment on the Stock Marke
 Resources
 https://blog.resourcewatch.org/2019/05/02/which-countries-use-the-most-fossil-fuels/
 
+https://grmds.org/competition/news-sentiment
