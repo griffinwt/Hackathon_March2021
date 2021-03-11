@@ -40,5 +40,5 @@ def quick_explore(folder = 'folder_name'):
         print()
 
         df, redund_dict = preprocess_data(raw_df)
-    return 
+    return
 
