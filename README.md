@@ -110,6 +110,9 @@
 > * [`2020 Russia–Saudi Arabia Oil Price War`] (Wiki): ([*source*](https://en.wikipedia.org/wiki/2020_Russia%E2%80%93Saudi_Arabia_oil_price_war))
 > * [`MobilityScore: an Improvement over TransitScore?`] (Blog: Human Transit): ([*source*](https://humantransit.org/2018/01/mobilityscore-an-improvement-over-transitscore.html))
 > * [`Media Bias Fact Check`] (MBFC News): ([*source*](https://mediabiasfactcheck.com/2021/03/03/the-latest-fact-checks-curated-by-media-bias-fact-check-3-3-2021/))
+> * [`JODI-Oil Data Downloads`] (JODI): ([*source*](https://www.jodidata.org/oil/database/data-downloads.aspx))
+> * [`Stock Trading Strategy & Education: Open Interest`] (Investopedia): ([*source*](https://www.investopedia.com/terms/o/openinterest.asp))
+
 
 
 * [`Title`] (Platform): ([*source*](https://www.URL.com))
