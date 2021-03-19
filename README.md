@@ -119,6 +119,8 @@
 * [`Title`] (Platform): ([*source*](https://www.URL.com))
 
 ### Papers:
+* `Valero Energy Corporation Case Study` (Journal of Advanced Research in Social Sciences and Humanities): ([*source*](https://jarssh.com/papers/volume5-issue1/JARSSH-05-2020-0105.pdf))
+
 * `Title` (Journal/Blog): ([*source*](https://www.URL.com))
 
 ### Team Contacts:
