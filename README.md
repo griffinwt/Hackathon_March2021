@@ -112,12 +112,15 @@
 > * [`Media Bias Fact Check`] (MBFC News): ([*source*](https://mediabiasfactcheck.com/2021/03/03/the-latest-fact-checks-curated-by-media-bias-fact-check-3-3-2021/))
 > * [`JODI-Oil Data Downloads`] (JODI): ([*source*](https://www.jodidata.org/oil/database/data-downloads.aspx))
 > * [`Stock Trading Strategy & Education: Open Interest`] (Investopedia): ([*source*](https://www.investopedia.com/terms/o/openinterest.asp))
+> * [`West Texas Intermediate (WTI)`] (Investopedia: Commodities > Oil): ([*source*](https://www.investopedia.com/terms/w/wti.asp))
 
 
 
 * [`Title`] (Platform): ([*source*](https://www.URL.com))
 
 ### Papers:
+* `Valero Energy Corporation Case Study` (Journal of Advanced Research in Social Sciences and Humanities): ([*source*](https://jarssh.com/papers/volume5-issue1/JARSSH-05-2020-0105.pdf))
+
 * `Title` (Journal/Blog): ([*source*](https://www.URL.com))
 
 ### Team Contacts:
