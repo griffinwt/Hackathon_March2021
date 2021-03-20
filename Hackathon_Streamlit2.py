@@ -32,7 +32,7 @@ def plot_preds(ytraindf, ytestdf, pred_df, title='Title', xlab=None, ylab=None):
         ax.plot(ytestdf[col], color='blue') #plot each ytest
     for col in pred_df.columns:
         ax.plot(pred_df[col], color='orange') #plot the preds
-    ax.title(title, fontsize=26)
+    plt.title(title, fontsize=26)
     ax.xlabel(xlab, fontsize=20)
     ax.ylabel(ylab, fontsize=20)
     ax.xticks(fontsize=18)
