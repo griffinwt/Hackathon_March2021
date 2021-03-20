@@ -25,18 +25,18 @@ page = st.sidebar.selectbox(
 
 def plot_preds(ytraindf, ytestdf, pred_df, title='Title', xlab=None, ylab=None):
     fig, ax = plt.subplots()
-    plt.figure(figsize=(30,20))
+    ax.figure(figsize=(30,20))
     for col in ytraindf.columns:
         ax.plot(ytraindf[col]) #plot each ytrain
     for col in ytestdf.columns:
         ax.plot(ytestdf[col], color='blue') #plot each ytest
     for col in pred_df.columns:
         ax.plot(pred_df[col], color='orange') #plot the preds
-    plt.title(title, fontsize=26)
-    plt.xlabel(xlab, fontsize=20)
-    plt.ylabel(ylab, fontsize=20)
-    plt.xticks(fontsize=18)
-    plt.yticks(fontsize=18)
+    ax.title(title, fontsize=26)
+    ax.xlabel(xlab, fontsize=20)
+    ax.ylabel(ylab, fontsize=20)
+    ax.xticks(fontsize=18)
+    ax.yticks(fontsize=18)
     ax.legend(pred_df.columns, fontsize=18)
     return st.pyplot(fig)
 
