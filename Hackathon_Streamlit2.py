@@ -33,17 +33,17 @@ def plot_preds(ytraindf, ytestdf, pred_df, title='Title', xlab=None, ylab=None):
     for col in pred_df.columns:
         ax.plot(pred_df[col], color='magenta') #plot the preds
     #ax.set(title=title, xlabel = xlab, ylabel = ylab)
-    ax.set_title(title, fontsize=30)
-    ax.set_xlabel(xlab, fontsize=25)
-    ax.set_ylabel(ylab, fontsize=25)
-    ax.tick_params(axis='x', labelsize=18)
-    ax.tick_params(axis='y', labelsize=18)
+    ax.set_title(title, fontsize=35)
+    ax.set_xlabel(xlab, fontsize=28)
+    ax.set_ylabel(ylab, fontsize=28)
+    ax.tick_params(axis='x', labelsize=22)
+    ax.tick_params(axis='y', labelsize=22)
     #ax.set_xticks(fontsize=18)
     #ax.set_yticks(fontsize=18)
     #leg_list = list(pred_df.columns) #legend features
     #leg_list.append('predicted')
     #leg_list.append('actual')
-    ax.legend(pred_df.columns, fontsize=20)
+    ax.legend(pred_df.columns, fontsize=22)
     #ax.legend(leg_list, fontsize=20)
     return st.pyplot(fig)
 
