@@ -226,7 +226,7 @@ Try it out for yourself:
     featlist = [d,i,a,g,w,s,y]
     selectafeat = ['direct','indirect','apple','google','dowjones','sp', 'yest']
 
-     st.write('*The test data will appear on the graph in black, predictions for those same values will be overlaid in purple.*')   
+    st.write('*The test data will appear on the graph in black, predictions for those same values will be overlaid in purple.*')   
 
     if st.button('Run Model!'): #if the button is clicked
         st.write(model(featlist)) #run the function with chosen features
