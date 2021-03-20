@@ -29,16 +29,16 @@ def plot_preds(ytraindf, ytestdf, pred_df, title='Title', xlab=None, ylab=None):
     for col in ytraindf.columns:
         ax.plot(ytraindf[col]) #plot each ytrain
     for col in ytestdf.columns:
-        ax.plot(ytestdf[col], color='blue') #plot each ytest
+        ax.plot(ytestdf[col], color='black') #plot each ytest
     for col in pred_df.columns:
-        ax.plot(pred_df[col], color='orange') #plot the preds
+        ax.plot(pred_df[col], color='magenta') #plot the preds
     #ax.set(title=title, xlabel = xlab, ylabel = ylab)
-    ax.set_title(title, fontsize=26)
-    ax.set_xlabel(xlab, fontsize=20)
-    ax.set_ylabel(ylab, fontsize=20)
+    ax.set_title(title, fontsize=30)
+    ax.set_xlabel(xlab, fontsize=25)
+    ax.set_ylabel(ylab, fontsize=25)
     #ax.set_xticks(fontsize=18)
     #ax.set_yticks(fontsize=18)
-    ax.legend(pred_df.columns, fontsize=15)
+    ax.legend(pred_df.columns, fontsize=20)
     return st.pyplot(fig)
 
 def model(a_list):
