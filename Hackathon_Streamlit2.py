@@ -25,7 +25,7 @@ page = st.sidebar.selectbox(
 
 def plot_preds(ytraindf, ytestdf, pred_df, title='Title', xlab=None, ylab=None):
     fig, ax = plt.subplots()
-    ax.figure(figsize=(30,20))
+    plt.figure(figsize=(30,20))
     for col in ytraindf.columns:
         ax.plot(ytraindf[col]) #plot each ytrain
     for col in ytestdf.columns:
