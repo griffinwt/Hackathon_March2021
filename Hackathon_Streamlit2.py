@@ -36,6 +36,8 @@ def plot_preds(ytraindf, ytestdf, pred_df, title='Title', xlab=None, ylab=None):
     ax.set_title(title, fontsize=30)
     ax.set_xlabel(xlab, fontsize=25)
     ax.set_ylabel(ylab, fontsize=25)
+    ax.tick_params(axis='x', labelsize=18)
+    ax.tick_params(axis='y', labelsize=18)
     #ax.set_xticks(fontsize=18)
     #ax.set_yticks(fontsize=18)
     #leg_list = list(pred_df.columns) #legend features
