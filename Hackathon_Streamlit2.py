@@ -33,10 +33,10 @@ def plot_preds(ytraindf, ytestdf, pred_df, title='Title', xlab=None, ylab=None):
     for col in pred_df.columns:
         ax.plot(pred_df[col], color='orange') #plot the preds
     plt.title(title, fontsize=26)
-    ax.xlabel(xlab, fontsize=20)
-    ax.ylabel(ylab, fontsize=20)
-    ax.xticks(fontsize=18)
-    ax.yticks(fontsize=18)
+    fig.xlabel(xlab, fontsize=20)
+    fig.ylabel(ylab, fontsize=20)
+    fig.xticks(fontsize=18)
+    fig.yticks(fontsize=18)
     ax.legend(pred_df.columns, fontsize=18)
     return st.pyplot(fig)
 
