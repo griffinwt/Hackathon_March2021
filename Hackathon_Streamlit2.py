@@ -4,7 +4,7 @@ import pandas as pd
 #REMINDER - to preview in local browser: strealit run file_name.py (in bash)
 
 #custom imports
-!pip install matplotlib
+pip install matplotlib
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 import statsmodels.api as sm
