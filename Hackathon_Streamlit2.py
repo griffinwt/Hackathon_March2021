@@ -14,7 +14,7 @@ st.set_page_config(
     initial_sidebar_state='auto'
 )
 
-st.title('Putting Stock in Sentiment')
+st.title('"Putting Stock" in Sentiment')
 st.subheader('A Thoughtful Examination of the Relationship Between Closing Stock Prices and Daily News Stories')
 
 page = st.sidebar.selectbox(
