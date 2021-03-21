@@ -202,7 +202,7 @@ This is an interactive display of models and visualizations related to the RMDS 
 (From the competition homepage) *This data science competition seeks to create an innovative solution to analyze the effects of news sentiment and biases on daily stock performance for top companies in the oil and gas industry.*
 
 ''')
-    st.subheader('Use the drop-down menu on the left to explore learn more about the problem, our appreach, and an interactive model-building widget')
+    st.subheader('Use the drop-down menu on the left to discover more about the data, our approach, and an interactive model-building widget to try out for yourself!')
 
     st.image('./images/oilrig.jpg', caption='Photo by Clyde Thomas from unsplash.com (https://unsplash.com/@clydeo)', use_column_width=True)
 
