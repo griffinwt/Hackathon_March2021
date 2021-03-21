@@ -255,16 +255,27 @@ Try it out for yourself:
 
 elif page == 'Data Dictionary':
     st.subheader('Data Dictionary')
-    st.write('''
-    data dictionary here
-    ''')
+
+    st.write('**Comoddity-Prices**')
     st.markdown('''
     |Indicator|Data Type|Dataset|Region-Frequency|Description|
-|---|---|---|---|---|
-|**Brent Crude Oil**|*float*|Commodity Prices|Daily|Price, in USD per barrel, of North Sea Brent crude oil as traded on the Intercontinental Exchange(ICE).|
-|**WTI Crude Oil**|*float*|Commodity Prices|Daily|Price, in USD per barrel, of West Texas Intermediate(WTI) crude oil, the underlying commodity of the NYMSEX. It is the main oil benchmark for North America.|
-|**Settlement Price**|*float*|Commodity & Exchange|Daily|Price of final transaction on a futures exchange for a given "trading" day.|
-|**Open Interest**|*int*|Commodity & Exchange|Daily|Number of outstanding contracts(positions held) in the derivatives market. Open interest is an indicator of liquidity as each futures contract is for 100 shares.|''')
+    |---|---|---|---|---|
+    |**Brent Crude Oil**|*float*|Commodity Prices|Daily|Price, in USD per barrel, of North Sea Brent crude oil as traded on the Intercontinental Exchange(ICE).|
+    |**WTI Crude Oil**|*float*|Commodity Prices|Daily|Price, in USD per barrel, of West Texas Intermediate(WTI) crude oil, the underlying commodity of the NYMSEX. It is the main oil benchmark for North America.|
+    |**Settlement Price**|*float*|Commodity & Exchange|Daily|Price of final transaction on a futures exchange for a given "trading" day.|
+    |**Open Interest**|*int*|Commodity & Exchange|Daily|Number of outstanding contracts(positions held) in the derivatives market. Open interest is an indicator of liquidity as each futures contract is for 100 shares.|''')
+
+    st.write('**Google Mobility**')
+    st.markdown('''
+    |Indicator|Data Type|Dataset|Region-Frequency|Description|
+    |---|---|---|---|---|
+    |**Grocery & Pharmacy**|*float*|Google Mobility|U.S. Daily|Mobility trends for places like grocery markets, food warehouses, farmers markets, specialty food shops, drug stores, and pharmacies.|
+    |**Parks**|*float*|Google Mobility|U.S. Daily|Mobility trends for places like local parks, national parks, public beaches, marinas, dog parks, plazas, and public gardens.|
+    |**Transit Stations**|*float*|Google Mobility|U.S. Daily|Mobility trends for places like public transport hubs such as subway, bus, and train stations.|
+    |**Retail & Recreation**|*float*|Google Mobility|U.S. Daily|Mobility trends for places like restaurants, cafes, shopping centers, theme parks, museums, libraries, and movie theaters.|
+    |**Residential**|*float*|Google Mobility|U.S. Daily|Mobility trends for places of residence.|
+    |**Workplaces**|*float*|Google Mobility|U.S. Daily|Mobility trends for places of work.|
+    ''')
 
 elif page == 'About The Team':
 
