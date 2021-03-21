@@ -192,12 +192,12 @@ if page == 'Overview':
 
 This is an interactive application to display models and visualizations related to the RMDS / WorldData.ai Data Science competition "Impact of News Sentiment on the Stock Market".
 
-(From the competition homepage) *This data science competition seeks to create an innovative solution to analyze the effects of news sentiment and biases on daily stock performance for top companies in the oil and gas industry.*
+(From the competition homepage) *This data science competition seeks to create an innovative solution to analyze the effects of news sentiment and biases on daily stock performance for top companies in the oil and gas industry.*  [Competition Link](https://grmds.org/competition/news-sentiment)
 
 ''')
     st.subheader('Use the drop-down menu on the left to discover more about the data, our approach and an interactive model-building widget to try out for yourself!')
 
-    st.image('./images/oilrig.jpg', caption='Photo by Clyde Thomas from unsplash.com (https://unsplash.com/@clydeo)', use_column_width=True)
+    st.image('./images/oilrig.jpg', caption='[Photo by Clyde Thomas from unsplash.com](https://unsplash.com/@clydeo)', use_column_width=True)
 
 elif page =='Financial Data':
     st.write('text here')
@@ -207,7 +207,7 @@ elif page =='Mobility Data':
 
 elif page =='News Sentiment':
 
-    st.image('./images/news.jpg', caption='Photo by https://unsplash.com/@freegraphictoday', use_column_width=True)  
+    st.image('./images/news.jpg', caption='[Photo by fron unsplash.com](https://unsplash.com/@freegraphictoday)', use_column_width=True)  
 
     st.write('''
     WorldData.ai provides an impressive array of news archives and sentiment scoring. Every article is analyzed through Natural Language Processing on a scale of -1 to 1 where anything above zero would be generally positive and anything below zero has a negative tilt. The scores we used were calculated by WorldData.ai so we (fortunately) did not have to classify tens of thousands of articles ourselves! Two things we DID have control over were news source and keyword selection.
@@ -267,7 +267,7 @@ We are curious, humble and enthusiastic data scholars, formerly classmates in Ge
 
 As a Data Scientist, I excel at overcoming technical challenges by my unique ability to work well with others in ways that leverage my customer-facing experience in the service industry with my rigorous training in STEM research. In particular, I attribute my achieving work ethic and communicative fluidity to a passion for making meaningful impacts on the community I live in, here and now. 
 
-https://www.linkedin.com/in/griffinbran/
+[LinkedIn](https://www.linkedin.com/in/griffinbran/)
     ''')
 
     st.image('./images/will_hat.jpg', use_column_width=True)
@@ -275,7 +275,7 @@ https://www.linkedin.com/in/griffinbran/
     st.write('''
 **Will** - After 8 successful years in logistics and management, I set out on a new career in Data Science in the Fall of 2020. I am passionate about finding practical solutions to complex problems and creating strategies that translate to every level of an organization. I enjoy developing novel approaches to help departments, teams, and individuals perform at their best and exceed expectations.
 
-https://griffinwt.github.io/
+[Portfolio Site](https://griffinwt.github.io/)
     ''')
 
 
