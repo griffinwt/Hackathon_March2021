@@ -248,13 +248,19 @@ Former GA DSI classmates (add text here)
     #st.table(pd.read_pickle('./compressed/sample_pivot.pkl'))
 
     st.write('''
-Brandon - (profile, optional image)
+**Brandon** - I am a data-driven strategist, decision-maker, and storyteller with an earnest appreciation for the collaborative nature of problem solving. My research experience analyzing and extracting insights from multidimensional data has instilled in me a fascination for a number of computer vision related tasks such as object localization, detection, and image segmentation. The quantitative and analytic nature of physics excites me and I actively pursue machine learning solutions, to data science problems, in the same way.
+
+As a Data Scientist, I excel at overcoming technical challenges by my unique ability to work well with others in ways that leverage my customer-facing experience in the service industry with my rigorous training in STEM research. In particular, I attribute my achieving work ethic and communicative fluidity to a passion for making meaningful impacts on the community I live in, here and now. 
+
+https://www.linkedin.com/in/griffinbran/
     ''')
 
     #st.image('./images/sample_vectors.png', use_column_width=True)
 
     st.write('''
-Will - (profile, optional image)   
+**Will** - Data Scientist with a background in logistics and management. After a successful 8-year career in logistics, I set out on a new career in Data Science in the Fall of 2020. I am passionate about finding practical solutions to complex problems and creating strategies that translate to every level of an organization. I enjoy developing novel approaches to help departments, teams, and individuals perform at their best and exceed expectations.
+
+https://griffinwt.github.io/
     ''')
 
     #st.image('./images/sample_vectors.png', use_column_width=True)
