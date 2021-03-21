@@ -9,6 +9,9 @@ from sklearn.model_selection import train_test_split
 import statsmodels.api as sm
 from sklearn.metrics import mean_squared_error
 
+from matplotlib.backends.backend_agg import RendererAgg #https://docs.streamlit.io/en/stable/deploy_streamlit_app.html?highlight=matplotlib%20lock#limitations-and-known-issues
+_lock = RendererAgg.lock
+
 st.set_page_config(
     page_icon=':fuelpump:',
     initial_sidebar_state='auto'
@@ -25,20 +28,21 @@ page = st.sidebar.selectbox(
 #functions
 
 def plot_preds(ytraindf, ytestdf, pred_df, title='Title', xlab=None, ylab=None):
-    fig, ax = plt.subplots(figsize=(35,23))
-    for col in ytraindf.columns:
-        ax.plot(ytraindf[col]) #plot each ytrain
-    for col in ytestdf.columns:
-        ax.plot(ytestdf[col], color='black') #plot each ytest
-    for col in pred_df.columns:
-        ax.plot(pred_df[col], color='magenta') #plot the preds
-    ax.set_title(title, fontsize=35)
-    ax.set_xlabel(xlab, fontsize=28)
-    ax.set_ylabel(ylab, fontsize=28)
-    ax.tick_params(axis='x', labelsize=22)
-    ax.tick_params(axis='y', labelsize=22)
-    ax.legend(pred_df.columns, fontsize=22)
-    return st.pyplot(fig)
+    with _lock:
+        fig, ax = plt.subplots(figsize=(35,23))
+        for col in ytraindf.columns:
+            ax.plot(ytraindf[col]) #plot each ytrain
+        for col in ytestdf.columns:
+            ax.plot(ytestdf[col], color='black') #plot each ytest
+        for col in pred_df.columns:
+            ax.plot(pred_df[col], color='magenta') #plot the preds
+        ax.set_title(title, fontsize=35)
+        ax.set_xlabel(xlab, fontsize=28)
+        ax.set_ylabel(ylab, fontsize=28)
+        ax.tick_params(axis='x', labelsize=22)
+        ax.tick_params(axis='y', labelsize=22)
+        ax.legend(pred_df.columns, fontsize=22)
+        return st.pyplot(fig)
 
 def model(a_list):
     included = [] #list to put included features into
