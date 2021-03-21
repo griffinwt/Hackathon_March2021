@@ -256,7 +256,7 @@ Try it out for yourself:
 elif page == 'Data Dictionary':
     st.subheader('Data Dictionary')
 
-    st.write('**Commodity-Prices**')
+    st.write('**Commodity Prices**')
     st.markdown('''
     |Indicator|Data Type|Dataset|Region-Frequency|Description|
     |---|---|---|---|---|
