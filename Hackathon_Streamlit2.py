@@ -90,7 +90,7 @@ def model(a_list):
         #plt.legend(final_preds.columns, fontsize=18)
         #st.write(plt.show())
         #return st.write('RMSE for each target:', scores)
-        return st.table(pd.DataFrame(scores, index='RMSE',)).T)
+        return st.table(pd.DataFrame(scores, index=('RMSE',)).T)
 
 #lists
 yest = ['lag_bp_plc', 'lag_valero_energy_corporation',
