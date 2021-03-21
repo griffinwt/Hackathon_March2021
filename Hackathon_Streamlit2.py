@@ -85,8 +85,8 @@ def model(a_list):
         training = pd.DataFrame(train_list) #turn dictionary of lists into dataframe
         testing = pd.DataFrame(test_list) #turn dictionary of lists into dataframe
 
-        #plot_preds(training, testing, final_preds, title='Predicting Daily Closing Price - Energy Stocks',
-        #           xlab='Year-Month', ylab='USD($)')
+        plot_preds(training, testing, final_preds, title='Predicting Daily Closing Price - Energy Stocks',
+                   xlab='Year-Month', ylab='USD($)')
         #plt.legend(final_preds.columns, fontsize=18)
         #st.write(plt.show())
         return st.write('RMSE for each target:', scores)
@@ -254,8 +254,7 @@ Try it out for yourself:
 
     if st.button('Run Model!'): #if the button is clicked
         st.write(model(featlist)) #run the function with chosen features
-        plot_preds(training, testing, final_preds, title='Predicting Daily Closing Price - Energy Stocks',
-        xlab='Year-Month', ylab='USD($)')
+        
     else:
         st.write('Click the button to run a model with your selected features')
 
