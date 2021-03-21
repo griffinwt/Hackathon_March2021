@@ -244,7 +244,8 @@ elif page == 'About The Team':
     st.write('''
 We are curious, humble and enthusiastic data scholars, formerly classmates in General Assembly's Data Science Immersive program (Graduated December 2020).
     ''')
-
+    st.image('./images/bran.JPG', use_column_width=True)
+    
     st.write('''
 **Brandon** - I am a data-driven strategist, decision-maker, and storyteller with an earnest appreciation for the collaborative nature of problem solving. My research experience analyzing and extracting insights from multidimensional data has instilled in me a fascination for a number of computer vision related tasks such as object localization, detection, and image segmentation. The quantitative and analytic nature of physics excites me and I actively pursue machine learning solutions, to data science problems, in the same way.
 
@@ -253,7 +254,7 @@ As a Data Scientist, I excel at overcoming technical challenges by my unique abi
 https://www.linkedin.com/in/griffinbran/
     ''')
 
-    st.image('./images/bran.JPG', use_column_width=True)
+    st.image('./images/will_hat.jpg', use_column_width=True)
 
     st.write('''
 **Will** - Data Scientist with a background in logistics and management. After a successful 8-year career in logistics, I set out on a new career in Data Science in the Fall of 2020. I am passionate about finding practical solutions to complex problems and creating strategies that translate to every level of an organization. I enjoy developing novel approaches to help departments, teams, and individuals perform at their best and exceed expectations.
@@ -261,7 +262,7 @@ https://www.linkedin.com/in/griffinbran/
 https://griffinwt.github.io/
     ''')
 
-    st.image('./images/will_hat.jpg', use_column_width=True)
+
 
     st.write('''
 With special thanks to Nader Esmael, Cloudy Liu, James Salisbury & Cristina Sahoo.
