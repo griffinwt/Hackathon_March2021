@@ -90,7 +90,7 @@ def model(a_list):
         #plt.legend(final_preds.columns, fontsize=18)
         #st.write(plt.show())
         #return st.write('RMSE for each target:', scores)
-        return st.table(pd.DataFrame(scores, index=('RMSE',)).T)
+        return pd.DataFrame(scores, index=('RMSE',)).T
 
 #lists
 yest = ['lag_bp_plc', 'lag_valero_energy_corporation',
@@ -254,7 +254,7 @@ Try it out for yourself:
     st.write('*The test data will appear on the graph in black, predictions for those same values will be overlaid in purple.*')   
 
     if st.button('Run Model!'): #if the button is clicked
-        st.write(model(featlist)) #run the function with chosen features
+        st.table(model(featlist)) #run the function with chosen features
 
     else:
         st.write('Click the button to run a model with your selected features')
