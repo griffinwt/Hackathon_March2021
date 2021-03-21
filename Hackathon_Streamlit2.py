@@ -267,6 +267,6 @@ https://griffinwt.github.io/
 
 
     st.write('''
-With special thanks to Nader Esmael, Cloudy Liu, James Salisbury & Cristina Sahoo.
+**With special thanks** to Nader Esmael, Cloudy Liu, James Salisbury & Cristina Sahoo.
     ''')
 
