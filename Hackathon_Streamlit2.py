@@ -259,7 +259,7 @@ https://www.linkedin.com/in/griffinbran/
     st.image('./images/will_hat.jpg', use_column_width=True)
 
     st.write('''
-**Will** - Data Scientist with a background in logistics and management. After a successful 8-year career in logistics, I set out on a new career in Data Science in the Fall of 2020. I am passionate about finding practical solutions to complex problems and creating strategies that translate to every level of an organization. I enjoy developing novel approaches to help departments, teams, and individuals perform at their best and exceed expectations.
+**Will** - After 8 successful years in logistics management, I set out on a new career in Data Science in the Fall of 2020. I am passionate about finding practical solutions to complex problems and creating strategies that translate to every level of an organization. I enjoy developing novel approaches to help departments, teams, and individuals perform at their best and exceed expectations.
 
 https://griffinwt.github.io/
     ''')
