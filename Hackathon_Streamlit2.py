@@ -89,7 +89,8 @@ def model(a_list):
                    xlab='Year-Month', ylab='USD($)')
         #plt.legend(final_preds.columns, fontsize=18)
         #st.write(plt.show())
-        return st.write('RMSE for each target:', scores)
+        #return st.write('RMSE for each target:', scores)
+        return st.table(pd.DataFrame(scores, index='RMSE',)).T
 
 #lists
 yest = ['lag_bp_plc', 'lag_valero_energy_corporation',
@@ -254,7 +255,7 @@ Try it out for yourself:
 
     if st.button('Run Model!'): #if the button is clicked
         st.write(model(featlist)) #run the function with chosen features
-        
+
     else:
         st.write('Click the button to run a model with your selected features')
 
@@ -321,7 +322,7 @@ elif page == 'About The Team':
 
     st.subheader('About The Team')
     st.write('''
-We are curious, humble and enthusiastic data scholars, formerly classmates in General Assembly's Data Science Immersive program (Graduated December 2020).
+We are curious, humble and enthusiastic data scholars, formerly classmates in General Assembly's Data Science Immersive program (Graduated December 2020). We entered this competition under the team name "Sc13nce Squad" because our student Slack channel is "West Coast Squad" and we were GA's DSI cohort #13.
     ''')
     st.image('./images/bran.JPG', use_column_width=True)
 
@@ -340,7 +341,6 @@ As a Data Scientist, I excel at overcoming technical challenges by my unique abi
 
 [Will's Portfolio Site](https://griffinwt.github.io/)
     ''')
-
 
 
     st.write('''
