@@ -18,7 +18,7 @@ st.title('RMDS Hackathon')
 
 page = st.sidebar.selectbox(
     'Select-A-Page',
-    ('Overview', 'Models', 'About The Team')
+    ('Overview', 'Create A Model', 'About The Team')
 )
 
 #functions
@@ -197,14 +197,16 @@ if page == 'Overview':
     st.subheader('Overview')
     st.write('''
 
-Display of models and visualizations related to RMDS / WorldData.ai Data Science competition.
+This is an interactive display of models and visualizations related to the RMDS / WorldData.ai Data Science competition "Impact of News Sentiment on the Stock Market".
+
+(From the competition homepage) *This data science competition seeks to create an innovative solution to analyze the effects of news sentiment and biases on daily stock performance for top companies in the oil and gas industry.*
 
 ''')
     st.subheader('Use the drop-down menu on the left to explore')
 
     st.image('./images/oilrig.jpg', caption='Photo by Clyde Thomas from unsplash.com (https://unsplash.com/@clydeo)', use_column_width=True)
 
-elif page =='Models':
+elif page =='Create A Model':
     st.subheader('Models')
     st.write('''
 Use the checkboxes to select which features to include, then click "Run" to visualize the model.
@@ -245,7 +247,7 @@ elif page == 'About The Team':
 We are curious, humble and enthusiastic data scholars, formerly classmates in General Assembly's Data Science Immersive program (Graduated December 2020).
     ''')
     st.image('./images/bran.JPG', use_column_width=True)
-    
+
     st.write('''
 **Brandon** - I am a data-driven strategist, decision-maker, and storyteller with an earnest appreciation for the collaborative nature of problem solving. My research experience analyzing and extracting insights from multidimensional data has instilled in me a fascination for a number of computer vision related tasks such as object localization, detection, and image segmentation. The quantitative and analytic nature of physics excites me and I actively pursue machine learning solutions, to data science problems, in the same way.
 
