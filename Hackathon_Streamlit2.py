@@ -198,7 +198,7 @@ This is an interactive application to display models and visualizations related 
     st.subheader('Use the drop-down menu on the left to discover more about the data, our approach and an interactive model-building widget to try out for yourself!')
 
     st.image('./images/oilrig.jpg', use_column_width=True)
-    st.write('[Photo by Clyde Thomas from unsplash.com](https://unsplash.com/@clydeo)')
+    st.write('[Photo by Clyde Thomas](https://unsplash.com/@clydeo)')
 
 elif page =='Financial Data':
     st.write('text here')
@@ -209,7 +209,7 @@ elif page =='Mobility Data':
 elif page =='News Sentiment':
 
     st.image('./images/news.jpg', use_column_width=True)  
-    st.write('[Photo from unsplash.com](https://unsplash.com/@freegraphictoday)')
+    st.write('[Photo by AbsolutVision](https://unsplash.com/@freegraphictoday)')
 
     st.write('''
     WorldData.ai provides an impressive array of news archives and sentiment scoring. Every article is analyzed through Natural Language Processing on a scale of -1 to 1 where anything above zero would be generally positive and anything below zero has a negative tilt. The scores we used were calculated by WorldData.ai so we (fortunately) did not have to classify tens of thousands of articles ourselves! Two things we DID have control over were news source and keyword selection.
