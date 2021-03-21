@@ -14,37 +14,30 @@ st.set_page_config(
     initial_sidebar_state='auto'
 )
 
-st.title('RMDS Hackathon')
+st.title('Putting Stock in Sentiment')
+st.subheader('A Thoughtful Examination of the Relationship Between Closing Stock Prices and Daily News Stories')
 
 page = st.sidebar.selectbox(
     'Select-A-Page',
-    ('Overview', 'Create A Model', 'About The Team')
+    ('Overview', 'Financial Data', 'Mobility Data', 'News Sentiment', 'Modeling', 'Create A Model', 'About The Team')
 )
 
 #functions
 
 def plot_preds(ytraindf, ytestdf, pred_df, title='Title', xlab=None, ylab=None):
     fig, ax = plt.subplots(figsize=(35,23))
-    #fig.figure(figsize=(30,20))
     for col in ytraindf.columns:
         ax.plot(ytraindf[col]) #plot each ytrain
     for col in ytestdf.columns:
         ax.plot(ytestdf[col], color='black') #plot each ytest
     for col in pred_df.columns:
         ax.plot(pred_df[col], color='magenta') #plot the preds
-    #ax.set(title=title, xlabel = xlab, ylabel = ylab)
     ax.set_title(title, fontsize=35)
     ax.set_xlabel(xlab, fontsize=28)
     ax.set_ylabel(ylab, fontsize=28)
     ax.tick_params(axis='x', labelsize=22)
     ax.tick_params(axis='y', labelsize=22)
-    #ax.set_xticks(fontsize=18)
-    #ax.set_yticks(fontsize=18)
-    #leg_list = list(pred_df.columns) #legend features
-    #leg_list.append('predicted')
-    #leg_list.append('actual')
     ax.legend(pred_df.columns, fontsize=22)
-    #ax.legend(leg_list, fontsize=20)
     return st.pyplot(fig)
 
 def model(a_list):
@@ -202,9 +195,21 @@ This is an interactive display of models and visualizations related to the RMDS 
 (From the competition homepage) *This data science competition seeks to create an innovative solution to analyze the effects of news sentiment and biases on daily stock performance for top companies in the oil and gas industry.*
 
 ''')
-    st.subheader('Use the drop-down menu on the left to discover more about the data, our approach, and an interactive model-building widget to try out for yourself!')
+    st.subheader('Use the drop-down menu on the left to discover more about the data, our approach and an interactive model-building widget to try out for yourself!')
 
     st.image('./images/oilrig.jpg', caption='Photo by Clyde Thomas from unsplash.com (https://unsplash.com/@clydeo)', use_column_width=True)
+
+elif page =='Financial Data':
+    st.write('text here')
+
+elif page =='Mobility Data':
+    st.write('text here')
+
+elif page =='News Sentiment':
+    st.write('text here')
+
+elif page =='Modeling':
+    st.write('best model here')
 
 elif page =='Create A Model':
     st.subheader('Models')
