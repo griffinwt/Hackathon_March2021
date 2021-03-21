@@ -112,9 +112,8 @@
 > * [`Media Bias Fact Check`] (MBFC News): ([*source*](https://mediabiasfactcheck.com/2021/03/03/the-latest-fact-checks-curated-by-media-bias-fact-check-3-3-2021/))
 > * [`JODI-Oil Data Downloads`] (JODI): ([*source*](https://www.jodidata.org/oil/database/data-downloads.aspx))
 > * [`Stock Trading Strategy & Education: Open Interest`] (Investopedia): ([*source*](https://www.investopedia.com/terms/o/openinterest.asp))
-> * [`West Texas Intermediate (WTI)`] (Investopedia: Commodities > Oil): ([*source*](https://www.investopedia.com/terms/w/wti.asp))
-
-
+> * [`West Texas Intermediate (WTI)`] (Investopedia): ([*source*](https://www.investopedia.com/terms/w/wti.asp))
+> * [`Is the Stock Market Closed Today (Dec 5, 2018)? Why?`] (Heavy): ([*source*](https://heavy.com/news/2018/12/stock-market-closed-national-day-of-mourning/))
 
 * [`Title`] (Platform): ([*source*](https://www.URL.com))
 
