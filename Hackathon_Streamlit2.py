@@ -201,13 +201,14 @@ This is an interactive application to display models and visualizations related 
     st.write('Photo by [Clyde Thomas](https://unsplash.com/@clydeo)')
 
 elif page =='Financial Data':
+    st.subheader('Financial Data')
     st.write('text here')
 
 elif page =='Mobility Data':
     st.write('text here')
 
 elif page =='News Sentiment':
-
+    st.subheader('News Sentiment')
     st.image('./images/news.jpg', use_column_width=True)  
     st.write('Photo by [AbsolutVision](https://unsplash.com/@freegraphictoday)')
 
@@ -220,10 +221,11 @@ elif page =='News Sentiment':
     ''')
 
 elif page =='Modeling':
+    st.subheader('Modeling')
     st.write('best model here')
 
 elif page =='Create A Model':
-    st.subheader('Models')
+    st.subheader('Create A Model')
     st.write('''
 Use the checkboxes to select which features to include, then click "Run" to visualize the model.
 
@@ -252,9 +254,17 @@ Try it out for yourself:
         st.write('Click the button to run a model with your selected features')
 
 elif page == 'Data Dictionary':
+    st.subheader('Data Dictionary')
     st.write('''
     data dictionary here
     ''')
+    st.markdown('''
+    |Indicator|Data Type|Dataset|Region-Frequency|Description|
+|---|---|---|---|---|
+|**Brent Crude Oil**|*float*|Commodity Prices|Daily|Price, in USD per barrel, of North Sea Brent crude oil as traded on the Intercontinental Exchange(ICE).|
+|**WTI Crude Oil**|*float*|Commodity Prices|Daily|Price, in USD per barrel, of West Texas Intermediate(WTI) crude oil, the underlying commodity of the NYMSEX. It is the main oil benchmark for North America.|
+|**Settlement Price**|*float*|Commodity & Exchange|Daily|Price of final transaction on a futures exchange for a given "trading" day.|
+|**Open Interest**|*int*|Commodity & Exchange|Daily|Number of outstanding contracts(positions held) in the derivatives market. Open interest is an indicator of liquidity as each futures contract is for 100 shares.|''')
 
 elif page == 'About The Team':
 
