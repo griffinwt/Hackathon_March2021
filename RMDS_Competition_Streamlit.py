@@ -207,7 +207,10 @@ Try it out for yourself:
     st.write('*The test data will appear on the graph in black, predictions for those same values will be overlaid in purple.*')   
 
     if st.button('Run Model!'): #if the button is clicked
-        st.table(model(featlist)) #run the function with chosen features
+        if d == False and e == False and i == False and j == False and f == False:
+            st.write(model(featlist)) #output is a string
+        else:
+            st.table(model(featlist)) #output is a dataframe
 
     else:
         st.write('Click the button to run a model with your selected features')
