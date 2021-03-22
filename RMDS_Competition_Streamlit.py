@@ -160,7 +160,9 @@ elif page =='Financial Data':
     st.write('text here')
 
 elif page =='Mobility Data':
-    st.write('text here')
+    st.write('**Apple**')
+    st.image('./images/apple_weekly.png', use_column_width=True)
+    st.write('This is a graph of the Apple mobility data - it was recorded in daily increments but for this graph it has been resampled at a weekly rate to provide a clearer trend picture. The countries whose scores were analyzed (USA, India, Russia, Japan, Germany) correspond to the top fossil fuel using countries with the exception of China for which no scores were available. The countries scores are further broken down into the categories of driving, walking, and transit, however there were no transit scores in the data for Russia and India. This led to a total of 13 Apple mobility features (USA:3, India:2, Russia:2, Japan:3, Germany:3). While this line graph undertakes a vaguely similar shape to the stock prices over the same time period, it did not prove to be particularly helpful with modeling and in fact brought down RMSE on the OLS model. Even more significantly, this dataset begins in early 2020, giving us little more than a year (~240 rows of business days) to analyze if we wanted to include it as a feature. Without it, we were able to include about four times as many rows using closing prices, sentiment, and indexes going back to early 2017.')
 
 elif page =='News Sentiment':
     st.subheader('News Sentiment')
@@ -180,7 +182,7 @@ elif page =='Modeling':
     st.write('**OLS**')
     st.write('The first model we developed was an ordinary least squares regression using the statsmodels package in Python. We used the NYSE closing prices as the base of the dataframe and then (left) joined all other features by matching dates. The mobility data, while thought provoking, only exists for roughly the past year, so it was disregarded in favor of a broader (4 year) look.')
 
-    st.image('./images/wout_mobility_preds_1.png')
+    st.image('./images/wout_mobility_preds_1.png', use_column_width=True)
 
     st.write('The measure of error (RMSE) was very good, indicating that the 10 close price predictions were within $0.65 to $4.47 of true values on average, as we might expect based on the consistent overlap between the black lines (test data) and purple lines (predicted close prices) in the image above. More importantly, however, a closer examination of the coefficients reveals which features were most critical to our predictions.')
 
