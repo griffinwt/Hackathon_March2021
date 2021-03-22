@@ -257,6 +257,14 @@ elif page =='Modeling':
     
     ''')
 
+    st.write('**ARIMA**')
+    st.write('The second model we tried was an ARIMA model. There were several challenges to this model including the number of features and the amount of missing dates which had to be imputed or manually added. After performing a manual gridsearch, we discovered that the ARIMA model was able to make predictions of percent change (once differentiated) like the visualization below in reference to Marathon Oil.')
+
+    st.image('./images/arima2.png', use_column_width=True)
+    st.write('''
+    Again, news sentiment was vital to the success of the model. Features include the lagged closing prices of all 10, crude oil settle prices lagged, previous day open interest, crude oil futures, direct financial "oil" sentiment, direct global "pipeline", and indirect global "airline".
+    ''')
+
 elif page =='Create A Model':
     st.subheader('Create A Model')
     st.write('''

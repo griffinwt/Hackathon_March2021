@@ -114,8 +114,15 @@ This data was also modeled in a resampled weekly prediction format, with RMSE fo
 
 
 
-Again, we see that news features make up all but two of the entire list! Interestingly, the Indirect keyword "greenhouse" specifically from Financial News sources has moved into second place on the ranking, proving itself among the top 5 most significant features in 7 of the 10 models. Clearly, this study suggests that news sentiment can be a powerful tool on the belt of any data scientist looking to create a more complete, multi-variate model predicting closing stock prices.
+Again, we see that news features make up all but two of the entire list! Interestingly, the Indirect keyword "greenhouse" specifically from Financial News sources has moved into second place on the ranking, proving itself among the top 5 most significant features in 7 of the 10 models. Clearly, this study suggests that news sentiment can be a powerful tool on the belt of any data scientist looking to create a more complete, multi-variate model predicting closing stock prices.  
 
+**ARIMA**  
+
+The second model we tried was an ARIMA model. There were several challenges to this model including the number of features and the amount of missing dates which had to be imputed or manually added. After performing a manual gridsearch, we discovered that the ARIMA model was able to make predictions of percent change (once differentiated) like the visualization below in reference to Marathon Oil.
+
+<img src="./images/arima2.png" style="height: 310px; width:660px;"/>  
+
+Again, news sentiment was vital to the success of the model. Features include the lagged closing prices of all 10, crude oil settle prices lagged, previous day open interest, crude oil futures, direct financial "oil" sentiment, direct global "pipeline", and indirect global "airline".
 
 <a id='recommendations_and_next_steps'></a>
 
@@ -123,7 +130,7 @@ Again, we see that news features make up all but two of the entire list! Interes
 ## Recommendations and Next Steps
 [Back to Top](#back_to_top)  
 
-Our results from careful examination and modeling give credence to the competition organizers' hypothesis that "News Sentiments and biases have a significant impact on stock prices and consumer behavior." 
+Our results from careful examination and modeling give credence to the competition organizers' hypothesis that "News Sentiments and biases have a significant impact on stock prices and consumer behavior." With more direct data access (API or similar), we could set this model to regularly pull down and predict daily or weekly stock prices with just a few standard financial metrics and, critically, WorldDate.ai's news sentiment scores. This would be valuable for traders and/or business leaders attempting to better understand and predict the ebb and flow in the volatile world of finance. In addition, our innovative deployment of an application based on this project (https://share.streamlit.io/griffinwt/hackathon_march2021/main/RMDS_Competition_Streamlit.py) is a useful educational and research tool that is accessible and approachable to a wide audience.
 
 <a id='acknowledgements_and_contact'></a>
 
