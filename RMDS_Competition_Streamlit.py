@@ -41,7 +41,7 @@ def plot_preds(ytraindf, ytestdf, pred_df, title='Title', xlab=None, ylab=None):
         ax.set_ylabel(ylab, fontsize=28)
         ax.tick_params(axis='x', labelsize=22)
         ax.tick_params(axis='y', labelsize=22)
-        ax.legend(pred_df.columns, fontsize=22, linewidth=2)
+        ax.legend(pred_df.columns, fontsize=22)
         return st.pyplot(fig)
 
 def model(a_list):
