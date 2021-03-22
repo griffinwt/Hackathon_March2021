@@ -229,7 +229,7 @@ elif page =='Modeling':
     This data was also modeled in a resampled weekly prediction format, with RMSE for all 10 targets ranging between $0.44 and $5.72. Here is a visualization of that plot and the top coefficients:
     ''')
     
-    st.image('../images/wout_mobility_preds_weekly.png', use_column_width=True)
+    st.image('./images/wout_mobility_preds_weekly.png', use_column_width=True)
 
     st.markdown('''
 |                                    |   Feature_count |
