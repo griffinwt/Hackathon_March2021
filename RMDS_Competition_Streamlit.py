@@ -163,7 +163,7 @@ elif page =='Financial Trends':
     This graph shows four years of NYSE closing prices (2017-2021) for each of our ten target companies. The volatility is obvious, especially in the past year as the pandemic triggered a huge dip in March 2020. Interestingly, some companies appear to suffer from higher volatility than others. Here's a second visualization of the same data:    
     ''')
 
-    st.image('./images/boxplot_price_distro_wlegend.png', use_column_width=True)
+    st.image('./images/boxplot_price_distro_wout_legend.png', use_column_width=True)
 
     st.write('''
     We see that Marathon Oil ("MRO") in the center has a low price but also stays very close to its median value over time, neither rising nor falling to any great degree. In contrast, Pioneer Natural Resource Company (PXD) takes on a vast range of closing prices, suggesting it can make or break the risk-loving investor. BP and Chevron (CVX) appear to hold the highest median value but also suffer some peaks and valleys over time.
