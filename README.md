@@ -10,6 +10,10 @@
 > "This data science competition seeks to create an innovative solution to analyze the effects of news sentiment and biases on daily stock performance for top companies in the oil and gas industry. News Sentiments and biases have a significant impact on stock prices and consumer behavior. Contestants will be provided with the necessary news data, stock market data, macro data and company financial data." - [*RMDS Competition Website*](https://grmds.org/competition/news-sentiment)
 
 ---
+## Want to view this information in a fun, interactive application? Click the link below!  
+
+[CHECK OUT THE WEB APP FOR THIS PROJECT](https://share.streamlit.io/griffinwt/hackathon_march2021/main/RMDS_Competition_Streamlit.py)
+
 ### Table of Contents
 
 * [Data Cleaning & EDA](#eda_and_cleaning)
@@ -35,7 +39,11 @@ We see that Marathon Oil ("MRO") in the center has a low price but also stays ve
 **Mobility Data**  
 Apple  
 <img src="./images/apple_weekly.png" style="height: 310px; width:660px;"/>
-This is a graph of the Apple mobility data - it was recorded in daily increments but for this graph it has been resampled at a weekly rate to provide a clearer trend picture. The countries whose scores were analyzed (USA, India, Russia, Japan, Germany) correspond to the top fossil fuel using countries with the exception of China for which no scores were available. The countries scores are further broken down into the categories of driving, walking, and transit, however there were no transit scores in the data for Russia and India. This led to a total of 13 Apple mobility features (USA:3, India:2, Russia:2, Japan:3, Germany:3). While this line graph undertakes a vaguely similar shape to the stock prices over the same time period, it did not prove to be particularly helpful with modeling and in fact brought down RMSE on the OLS model. Even more significantly, this dataset begins in early 2020, giving us little more than a year (~240 rows of business days) to analyze if we wanted to include it as a feature. Without it, we were able to include about four times as many rows using closing prices, sentiment, and indexes going back to early 2017.
+This is a graph of the Apple mobility data - it was recorded in daily increments but for this graph it has been resampled at a weekly rate to provide a clearer trend picture. The countries whose scores were analyzed (USA, India, Russia, Japan, Germany) correspond to the top fossil fuel using countries with the exception of China for which no scores were available. The countries scores are further broken down into the categories of driving, walking, and transit, however there were no transit scores in the data for Russia and India. This led to a total of 13 Apple mobility features (USA:3, India:2, Russia:2, Japan:3, Germany:3). While this line graph undertakes a vaguely similar shape to the stock prices over the same time period, it did not prove to be particularly helpful with modeling and in fact brought down RMSE on the OLS model. Even more significantly, this dataset begins in early 2020, giving us little more than a year (~240 rows of business days) to analyze if we wanted to include it as a feature. Without it, we were able to include about four times as many rows using closing prices, sentiment, and indexes going back to early 2017.  
+
+Google  
+<img src="./images/google_mobility.png" style="height: 310px; width:660px;"/>
+The Google mobility data is measured in percent change from baseline (defined as the first day records began) and divided into 6 categories - Workplaces, Retail and Recreation, Grocery and Pharmacy, Residential, Transit Stations, and Parks. The data the visualization above is specficially related to US Google map queries. As time progresses, we see that most mobility is on a downward trend in the early part of 2020 except for Residential which spike significantly, no doubt due to most people solely traveling in a residential context during various closures early in the pandemic. We see a suspicious spike in Retail and Grocery during early July, likely due to the Independence Day holiday. Similar spikes are evident towards the tail of the graph, likely representing Thanksgiving and Christmas. As we might intuitively expect, Residential travel spikes at those times, as does Grocery and Pharmacy, followed by substaial drop-offs as people stay at home with all the food they cooked themselves for the holidays! Unfortunately the Google data suffered much the same fate as the Apple data in that it was not particularly useful in modeling and also restricted us to using a single year of data in order to include it, so it did not last in the latest iterations of our models.
 
 **News Sentiment**
 
@@ -89,9 +97,24 @@ This data was also modeled in a resampled weekly prediction format, with RMSE fo
 
 <img src="./images/wout_mobility_preds_weekly.png" style="height: 310px; width:660px;"/>
 
+|                                    |   Feature_count |
+|:-----------------------------------|----------------:|
+| lag_d_f_marathon_oil               |               8 |
+| lag_i_f_greenhouse                 |               7 |
+| const                              |               7 |
+| lag_d_f_oil                        |               6 |
+| lag_d_f_valero                     |               5 |
+| lag_d_f_phillips_66                |               5 |
+| lag_d_f_occidental_petroleum       |               4 |
+| lag_i_f_carbon_footprint           |               3 |
+| lag_d_g_oil                        |               2 |
+| lag_d_g_valero                     |               1 |
+| lag_Value_MARATHON OIL CORPORATION |               1 |
+| lag_d_f_chevron                    |               1 |
 
 
-This study suggests that news sentiment can be a powerful tool on the belt of any data scientist looking to create a more complete, multi-variate model predicting closing stock prices.
+
+Again, we see that news features make up all but two of the entire list! Interestingly, the Indirect keyword "greenhouse" specifically from Financial News sources has moved into second place on the ranking, proving itself among the top 5 most significant features in 7 of the 10 models. Clearly, this study suggests that news sentiment can be a powerful tool on the belt of any data scientist looking to create a more complete, multi-variate model predicting closing stock prices.
 
 
 <a id='recommendations_and_next_steps'></a>
