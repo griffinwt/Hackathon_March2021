@@ -9,6 +9,9 @@ from sklearn.model_selection import train_test_split
 import statsmodels.api as sm
 from sklearn.metrics import mean_squared_error
 
+from matplotlib.backends.backend_agg import RendererAgg #https://docs.streamlit.io/en/stable/deploy_streamlit_app.html?highlight=matplotlib%20lock#limitations-and-known-issues
+_lock = RendererAgg.lock
+
 st.set_page_config(
     page_icon=':fuelpump:',
     initial_sidebar_state='auto'
@@ -25,20 +28,21 @@ page = st.sidebar.selectbox(
 #functions
 
 def plot_preds(ytraindf, ytestdf, pred_df, title='Title', xlab=None, ylab=None):
-    fig, ax = plt.subplots(figsize=(35,23))
-    for col in ytraindf.columns:
-        ax.plot(ytraindf[col]) #plot each ytrain
-    for col in ytestdf.columns:
-        ax.plot(ytestdf[col], color='black') #plot each ytest
-    for col in pred_df.columns:
-        ax.plot(pred_df[col], color='magenta') #plot the preds
-    ax.set_title(title, fontsize=35)
-    ax.set_xlabel(xlab, fontsize=28)
-    ax.set_ylabel(ylab, fontsize=28)
-    ax.tick_params(axis='x', labelsize=22)
-    ax.tick_params(axis='y', labelsize=22)
-    ax.legend(pred_df.columns, fontsize=22)
-    return st.pyplot(fig)
+    with _lock:
+        fig, ax = plt.subplots(figsize=(35,23))
+        for col in ytraindf.columns:
+            ax.plot(ytraindf[col]) #plot each ytrain
+        for col in ytestdf.columns:
+            ax.plot(ytestdf[col], color='black') #plot each ytest
+        for col in pred_df.columns:
+            ax.plot(pred_df[col], color='magenta') #plot the preds
+        ax.set_title(title, fontsize=35)
+        ax.set_xlabel(xlab, fontsize=28)
+        ax.set_ylabel(ylab, fontsize=28)
+        ax.tick_params(axis='x', labelsize=22)
+        ax.tick_params(axis='y', labelsize=22)
+        ax.legend(pred_df.columns, fontsize=22)
+        return st.pyplot(fig)
 
 def model(a_list):
     included = [] #list to put included features into
@@ -85,7 +89,8 @@ def model(a_list):
                    xlab='Year-Month', ylab='USD($)')
         #plt.legend(final_preds.columns, fontsize=18)
         #st.write(plt.show())
-        return st.write('RMSE for each target:', scores)
+        #return st.write('RMSE for each target:', scores)
+        return pd.DataFrame(scores, index=('RMSE',)).T
 
 #lists
 yest = ['lag_bp_plc', 'lag_valero_energy_corporation',
@@ -249,7 +254,8 @@ Try it out for yourself:
     st.write('*The test data will appear on the graph in black, predictions for those same values will be overlaid in purple.*')   
 
     if st.button('Run Model!'): #if the button is clicked
-        st.write(model(featlist)) #run the function with chosen features
+        st.table(model(featlist)) #run the function with chosen features
+
     else:
         st.write('Click the button to run a model with your selected features')
 
@@ -316,7 +322,7 @@ elif page == 'About The Team':
 
     st.subheader('About The Team')
     st.write('''
-We are curious, humble and enthusiastic data scholars, formerly classmates in General Assembly's Data Science Immersive program (Graduated December 2020).
+We are curious, humble and enthusiastic data scholars, formerly classmates in General Assembly's Data Science Immersive program (Graduated December 2020). We entered this competition under the team name "Sc13nce Squad" because our student Slack channel is "West Coast Squad" and we were GA's DSI cohort #13.
     ''')
     st.image('./images/bran.JPG', use_column_width=True)
 
@@ -335,7 +341,6 @@ As a Data Scientist, I excel at overcoming technical challenges by my unique abi
 
 [Will's Portfolio Site](https://griffinwt.github.io/)
     ''')
-
 
 
     st.write('''
