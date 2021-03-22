@@ -28,7 +28,8 @@
 **Financial Trends**  
 <img src="./images/all_closing_wout_mobility.png" style="height: 310px; width:660px;"/>
 This graph shows four years of NYSE closing prices (2017-2021) for each of our ten target companies. The volatility is obvious, especially in the past year as the pandemic triggered a huge dip in March 2020. Interestingly, some companies appear to suffer from higher volatility than others. Here's a second visualization of the same data:  
-<img src="./images/boxplot_price_distro_wout_legend.png" style="height: 310px; width:660px;"/>
+<img src="./images/boxplot_price_distro_wout_legend.png" style="height: 310px; width:660px;"/>  
+
 We see that Marathon Oil ("MRO") in the center has a low price but also stays very close to its median value over time, neither rising nor falling to any great degree. In contrast, Pioneer Natural Resource Company (PXD) takes on a vast range of closing prices, suggesting it can make or break the risk-loving investor. BP and Chevron (CVX) appear to hold the highest median value but also suffer some peaks and valleys over time.
 
 **Mobility Data**  
@@ -91,13 +92,7 @@ This is an aggregate table of the 5 largest coefficients (by absolute value) for
 ## Recommendations and Next Steps
 [Back to Top](#back_to_top)  
 
-- Reproducibility - 
-- Innovation
-- Impact
-- Methodology Validity
-- Usability
-- Ability to deploy
-- Fair and Ethical use of data
+Our results from careful examination and modeling give credence to the competition organizers' hypothesis that "News Sentiments and biases have a significant impact on stock prices and consumer behavior." 
 
 <a id='acknowledgements_and_contact'></a>
 

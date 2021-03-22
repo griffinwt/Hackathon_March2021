@@ -224,7 +224,32 @@ elif page =='Modeling':
     st.write('')
     st.write('''
     
-    This is an aggregate table of the 5 largest coefficients (by absolute value) for each of the ten target closing prices. Each feature is preceded by the word "lag" because it was lagged one day in order to simulate "yesterday's" news sentiment as a predictive factor for "today's" close price. We can see that the Direct keyword "oil" from the Financial News database was one of the top 5 most important features for 8 of the 10 targets! Second on the list is the Direct, Financial search phrase "marathon oil", followed by the Direct, Financial phrase "Phillips 66". Tied for third was the constant added to provide a y-intercept that is necessary in time-series modeling so not particularly valuable to us, however the next four most frequent are also news sentiment scores! We see the Indirect phrase "carbon footprint" from the Global News sources and then three more entries from the Direct, Financial news bucket, namely "valero", "occidental petroleum", and "fossil fuel". What is fascinating about this return is that the news sentiment scores, generally speaking, ranked higher in importance than the prior day's closing price for most stocks! This study suggests that news sentiment can be a powerful tool on the belt of any data scientist looking to create a more complete, multi-variate model predicting closing stock prices.
+    This is an aggregate table of the 5 largest coefficients (by absolute value) for each of the ten target closing prices. Each feature is preceded by the word "lag" because it was lagged one day in order to simulate "yesterday's" news sentiment as a predictive factor for "today's" close price. We can see that the Direct keyword "oil" from the Financial News database was one of the top 5 most important features for 8 of the 10 targets! Second on the list is the Direct, Financial search phrase "marathon oil", followed by the Direct, Financial phrase "Phillips 66". Tied for third was the constant added to provide a y-intercept that is necessary in time-series modeling so not particularly valuable to us, however the next four most frequent are also news sentiment scores! We see the Indirect phrase "carbon footprint" from the Global News sources and then three more entries from the Direct, Financial news bucket, namely "valero", "occidental petroleum", and "fossil fuel". 
+    
+    This data was also modeled in a resampled weekly prediction format, with RMSE for all 10 targets ranging between $0.44 and $5.72. Here is a visualization of that plot and the top coefficients:
+    ''')
+    
+    st.image('../images/wout_mobility_preds_weekly.png', use_column_width=True)
+
+    st.markdown('''
+|                                    |   Feature_count |
+|:-----------------------------------|----------------:|
+| lag_d_f_marathon_oil               |               8 |
+| lag_i_f_greenhouse                 |               7 |
+| const                              |               7 |
+| lag_d_f_oil                        |               6 |
+| lag_d_f_valero                     |               5 |
+| lag_d_f_phillips_66                |               5 |
+| lag_d_f_occidental_petroleum       |               4 |
+| lag_i_f_carbon_footprint           |               3 |
+| lag_d_g_oil                        |               2 |
+| lag_d_g_valero                     |               1 |
+| lag_Value_MARATHON OIL CORPORATION |               1 |
+| lag_d_f_chevron                    |               1 |
+    ''')
+    st.write('')
+    ('''
+    Again, we see that news features make up all but two of the entire list! Interestingly, the Indirect keyword "greenhouse" specifically from Financial News sources has moved into second place on the ranking, proving itself among the top 5 most significant features in 7 of the 10 models. Clearly, this study suggests that news sentiment can be a powerful tool on the belt of any data scientist looking to create a more complete, multi-variate model predicting closing stock prices.
     
     ''')
 
