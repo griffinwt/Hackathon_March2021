@@ -31,7 +31,7 @@ def plot_preds(ytraindf, ytestdf, pred_df, title='Title', xlab=None, ylab=None):
     with _lock:
         fig, ax = plt.subplots(figsize=(35,23))
         for col in ytraindf.columns:
-            ax.plot(ytraindf[col], linewidth=2) #plot each ytrain
+            ax.plot(ytraindf[col], linewidth=3) #plot each ytrain
         for col in ytestdf.columns:
             ax.plot(ytestdf[col], color='black', linewidth=2) #plot each ytest
         for col in pred_df.columns:
