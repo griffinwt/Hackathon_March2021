@@ -33,9 +33,9 @@ def plot_preds(ytraindf, ytestdf, pred_df, title='Title', xlab=None, ylab=None):
         for col in ytraindf.columns:
             ax.plot(ytraindf[col], linewidth=1) #plot each ytrain
         for col in ytestdf.columns:
-            ax.plot(ytestdf[col], color='black', linewidth=1) #plot each ytest
+            ax.plot(ytestdf[col], color='black', linewidth=3) #plot each ytest
         for col in pred_df.columns:
-            ax.plot(pred_df[col], color='magenta', linewidth=1) #plot the preds
+            ax.plot(pred_df[col], color='magenta', linewidth=3) #plot the preds
         ax.set_title(title, fontsize=35)
         ax.set_xlabel(xlab, fontsize=28)
         ax.set_ylabel(ylab, fontsize=28)
