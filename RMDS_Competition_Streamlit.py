@@ -31,11 +31,11 @@ def plot_preds(ytraindf, ytestdf, pred_df, title='Title', xlab=None, ylab=None):
     with _lock:
         fig, ax = plt.subplots(figsize=(35,23))
         for col in ytraindf.columns:
-            ax.plot(ytraindf[col], linewidth=1) #plot each ytrain
+            ax.plot(ytraindf[col], linewidth=2) #plot each ytrain
         for col in ytestdf.columns:
-            ax.plot(ytestdf[col], color='black', linewidth=3) #plot each ytest
+            ax.plot(ytestdf[col], color='black', linewidth=2) #plot each ytest
         for col in pred_df.columns:
-            ax.plot(pred_df[col], color='magenta', linewidth=3) #plot the preds
+            ax.plot(pred_df[col], color='magenta', linewidth=2) #plot the preds
         ax.set_title(title, fontsize=35)
         ax.set_xlabel(xlab, fontsize=28)
         ax.set_ylabel(ylab, fontsize=28)
