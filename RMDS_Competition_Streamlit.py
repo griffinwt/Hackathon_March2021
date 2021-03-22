@@ -192,19 +192,11 @@ Try it out for yourself:
     i = st.checkbox('News Sentiment - Indirect Keywords, Global News Sources')
     j = st.checkbox('News Sentiment - Indirect Keywords, Financial News Sources')
     f = st.checkbox('Financial and Commodity Indexes')
-    #a = st.checkbox('Apple Mobility Data')
-    #g = st.checkbox('Google Mobility Data')
-    #c = st.checkbox('Commodity Pricing')
-    #w = st.checkbox('Dow Jones Indicators')
-    #e = st.checkbox('OECD Interest Rates')
-    #f = st.checkbox('Futures')
-    #s = st.checkbox('S&P 500')
-    #y = st.checkbox('Prior Day Close Price')
-    #featlist = [d,i,a,g,c,w,e,f, y]
     featlist = [d,e,i,j,f]
     selectafeat = ['direct_g', 'direct_f','indirect_g', 'indirect_f', 'financial']
 
-    st.write('*The test data will appear on the graph in black, predictions for those same values will be overlaid in purple.*')   
+    st.write('*This model includes lagged (day before) closing price as a base feature by default; some features like mobility data were not included in this demonstration.*')
+    st.write('**The test data will appear on the graph in black, predictions for those same values will be overlaid in purple.**')   
 
     if st.button('Run Model!'): #if the button is clicked
         if d == False and e == False and i == False and j == False and f == False:
