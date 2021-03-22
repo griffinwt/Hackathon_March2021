@@ -18,7 +18,7 @@ st.set_page_config(
 )
 
 st.title('"Putting Stock" in Sentiment')
-st.subheader('A Thoughtful Examination of the Relationship Between Closing Stock Prices and Daily News Stories')
+st.subheader('An Examination of the Relationship Between Closing Stock Prices and Daily News Stories')
 
 page = st.sidebar.selectbox(
     'Select-A-Page',
@@ -348,7 +348,7 @@ elif page == 'About The Team':
 
     st.subheader('About The Team')
     st.write('''
-We are curious, humble and enthusiastic data scholars, formerly classmates in General Assembly's Data Science Immersive program (Graduated December 2020). We entered this competition under the team name "Sc13nce Squad" because our student Slack channel is "West Coast Squad" and we were GA's DSI cohort #13.
+We are curious, humble and enthusiastic data scholars, formerly classmates in General Assembly's Data Science Immersive program (Graduated December 2020). We entered this competition under the team name "Sc13nce Squad" because we were members of GA's DSI cohort #13.
     ''')
     st.image('./images/bran.JPG', use_column_width=True)
 
