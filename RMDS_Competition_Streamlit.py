@@ -229,6 +229,7 @@ elif page =='Modeling':
     st.write('''
     
     This is an aggregate table of the 5 largest coefficients (by absolute value) for each of the ten target closing prices. Each feature is preceded by the word "lag" because it was lagged one day in order to simulate "yesterday's" news sentiment as a predictive factor for "today's" close price. We can see that the Direct keyword "oil" from the Financial News database was one of the top 5 most important features for 8 of the 10 targets! Second on the list is the Direct, Financial search phrase "marathon oil", followed by the Direct, Financial phrase "Phillips 66". Tied for third was the constant added to provide a y-intercept that is necessary in time-series modeling so not particularly valuable to us, however the next four most frequent are also news sentiment scores! We see the Indirect phrase "carbon footprint" from the Global News sources and then three more entries from the Direct, Financial news bucket, namely "valero", "occidental petroleum", and "fossil fuel". 
+    ''')
 
     st.write('**ARIMA**')
     st.write('The second model we tried was an ARIMA model. There were several challenges to this model including the number of features and the amount of missing dates which had to be imputed or manually added. After performing a manual gridsearch, we discovered that the ARIMA model was able to make predictions of percent change (once differentiated) like the visualization below in reference to Marathon Oil.''')
